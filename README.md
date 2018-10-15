@@ -6,3 +6,7 @@ Language support for the ABB RAPID robot programming language.
 * [Issues](https://github.com/verbotics/vscode-abb-rapid/issues)
 
 ## Changelog
+
+### 0.1
+
+* Initial release
