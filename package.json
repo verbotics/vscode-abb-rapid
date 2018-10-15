@@ -2,7 +2,7 @@
     "name": "abb-rapid",
     "displayName": "ABB RAPID",
     "description": "Language support for the ABB RAPID robot programming language",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "verbotics",
     "engines": {
         "vscode": "^1.28.0"
