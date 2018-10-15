@@ -1,32 +1,87 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "RAPID",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.rapid",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.rapid",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.rapid",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.rapid"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "RAPID",
+  "scopeName": "source.rapid",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.character.rapid",
+          "match": "!.*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.rapid",
+          "match": "\\b(IF|THEN|ELSE|ELSEIF|ENDIF|FOR|FROM|TO|DO|ENDFOR|WHILE|DO|ENDWHILE|RETURN|CONNECT|EXIT|GOTO|RAISE|RETRY|TRYNEXT)\\b"
+        },
+        {
+          "name": "keyword.storage.modifier",
+          "match": "\\b(LOCAL|CONST|VAR|PERS|IN|OUT|INOUT)\\b"
+        },
+        {
+          "name": "keyword.control.type",
+          "match": "\\b(MODULE|ENDMODULE|PROC|ENDPROC|FUNC|ENDFUNC|RECORD|ENDRECORD)\\b"
+        },
+        {
+          "name": "keyword.storage.type",
+          "match": "\\b(aiotrigg|bool|btnres|busstate|buttondata|byte|clock|confdata|corrdescr|datapos|dionum|dir|dnum|errdomain|errnum|errstr|errtype|event_type|exec_level|extjoint|handler_type|icondata|identno|intnum|iodev|iounit_state|jointtarget|listitem|loaddata|loadidnum|loadsession|mecunit|motsetdata|num|opcalc|opnum|orient|paridnum|paridvalidnum|pathrecid|pos|pose|progdisp|rawbytes|restartdata|rmqheader|rmqmessage|rmqslot|robjoint|robtarget|shapedata|signalxx|socketdev|socketstatus|speeddata|stoppointdata|string|stringdig|switch|symnum|syncident|taskid|tasks|testsignal|tooldata|tpnum|trapdata|triggdata|triggios|triggiosdnum|triggstrgo|tunetype|uishownum|wobjdata|wzstationary|wztemporary|zonedata)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.rapid",
+          "match": "\\b(TRUE|FALSE)\\b"
+        },
+        {
+          "name": "constant.language.rapid",
+          "match": "\\b(v|vrot|vlin|z)[0-9]{1,4}\\b"
+        },
+        {
+          "name": "constant.language.rapid",
+          "match": "\\b(vmax|fine)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.rapid",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.rapid",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.rapid",
+          "match": "\\b-?\\d+(\\.\\d*)?([eE][+-]?\\d+)?\\b"
+        }
+      ]
+    }
+  }
 }
