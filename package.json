@@ -4,6 +4,10 @@
     "description": "Language support for the ABB RAPID robot programming language",
     "version": "0.1.0",
     "publisher": "verbotics",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/verbotics/vscode-abb-rapid.git"
+    },
     "engines": {
         "vscode": "^1.28.0"
     },
