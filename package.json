@@ -1,0 +1,26 @@
+{
+    "name": "abb-rapid",
+    "displayName": "ABB RAPID",
+    "description": "Language support for the ABB RAPID robot programming language",
+    "version": "0.0.1",
+    "publisher": "verbotics",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rapid",
+            "aliases": ["RAPID", "rapid"],
+            "extensions": [".mod",".prg",".sys"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rapid",
+            "scopeName": "source.rapid",
+            "path": "./syntaxes/rapid.tmLanguage.json"
+        }]
+    }
+}
