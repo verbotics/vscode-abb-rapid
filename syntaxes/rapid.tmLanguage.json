@@ -10,6 +10,9 @@
       "include": "#keywords"
     },
     {
+      "include": "#support"
+    },
+    {
       "include": "#constants"
     },
     {
@@ -35,16 +38,28 @@
           "match": "\\b(IF|THEN|ELSE|ELSEIF|ENDIF|FOR|FROM|TO|DO|ENDFOR|WHILE|DO|ENDWHILE|RETURN|CONNECT|EXIT|GOTO|RAISE|RETRY|TRYNEXT)\\b"
         },
         {
-          "name": "keyword.storage.modifier",
+          "name": "keyword.storage.modifier.rapid",
           "match": "\\b(LOCAL|CONST|VAR|PERS|IN|OUT|INOUT)\\b"
         },
         {
-          "name": "keyword.control.type",
+          "name": "keyword.control.type.rapid",
           "match": "\\b(MODULE|ENDMODULE|PROC|ENDPROC|FUNC|ENDFUNC|RECORD|ENDRECORD)\\b"
         },
         {
-          "name": "keyword.storage.type",
-          "match": "\\b(aiotrigg|bool|btnres|busstate|buttondata|byte|clock|confdata|corrdescr|datapos|dionum|dir|dnum|errdomain|errnum|errstr|errtype|event_type|exec_level|extjoint|handler_type|icondata|identno|intnum|iodev|iounit_state|jointtarget|listitem|loaddata|loadidnum|loadsession|mecunit|motsetdata|num|opcalc|opnum|orient|paridnum|paridvalidnum|pathrecid|pos|pose|progdisp|rawbytes|restartdata|rmqheader|rmqmessage|rmqslot|robjoint|robtarget|shapedata|signalxx|socketdev|socketstatus|speeddata|stoppointdata|string|stringdig|switch|symnum|syncident|taskid|tasks|testsignal|tooldata|tpnum|trapdata|triggdata|triggios|triggiosdnum|triggstrgo|tunetype|uishownum|wobjdata|wzstationary|wztemporary|zonedata)\\b"
+          "name": "support.type.rapid",
+          "match": "(?i)\\b(bool|byte|num|string)\\b"
+        }
+      ]
+    },
+    "support": {
+      "patterns": [
+        {
+          "name": "support.type.rapid",
+          "match": "(?i)\\b(aiotrigg|btnres|busstate|buttondata|clock|confdata|corrdescr|datapos|dionum|dir|dnum|errdomain|errnum|errstr|errtype|event_type|exec_level|extjoint|handler_type|icondata|identno|intnum|iodev|iounit_state|jointtarget|listitem|loaddata|loadidnum|loadsession|mecunit|motsetdata|opcalc|opnum|orient|paridnum|paridvalidnum|pathrecid|pos|pose|progdisp|rawbytes|restartdata|rmqheader|rmqmessage|rmqslot|robjoint|robtarget|shapedata|signalxx|socketdev|socketstatus|speeddata|stoppointdata|stringdig|switch|symnum|syncident|taskid|tasks|testsignal|tooldata|tpnum|trapdata|triggdata|triggios|triggiosdnum|triggstrgo|tunetype|uishownum|wobjdata|wzstationary|wztemporary|zonedata)\\b"
+        },
+        {
+          "name": "support.function.rapid",
+          "match": "(?i)\\b(AccSet|ActUnit|Add|AliasIO|BitClear|BitSet|BookErrNo|Break|CallByVar|CancelLoad|CheckProgRef|CirPathMode|Clear|ClearIOBuff|ClearPath|ClearRawBytes|ClkReset|ClkStart|ClkStop|Close|CloseDir|ConfJ|ConfL|CopyFile|CopyRawBytes|CorrClear|CorrCon|CorrDiscon|CorrWrite|DeactUnit|Decr|DitherAct|DitherDeact|DropWObj|EOffsOff|EOffsOn|EOffsSet|EraseModule|ErrLog|ErrRaise|ErrWrite|ExitCycle|GetDataVal|GetSysData|GetTrapData|GripLoad|HollowWristReset|IDelete|IDisable|IEnable|IError|Incr|IndAMove|IndCMove|IndDMove|IndReset|IndRMove|InvertDO|IOBusStart|IOBusState|IODisable|IOEnable|IPers|IRMQMessage|ISignalAI|ISignalAO|ISignalDI|ISignalDO|ISignalGI|ISignalGO|ISleep|ITimer|IVarValue|IWatch|Label|Load|LoadId|MakeDir|ManLoadIdProc|MechUnitLoad|MotionSup|MoveAbsJ|MoveC|MoveCDO|MoveCSync|MoveExtJ|MoveJ|MoveJDO|MoveJSync|MoveL|MoveLDO|MoveLSync|MToolRotCalib|MToolTCPCalib|Open|OpenDir|PackDNHeader|PackRawBytes|PathAccLim|PathRecMoveBwd|PathRecMoveFwd|PathRecStart|PathRecStop|PathResol|PDispOff|PDispOn|PDispSet|ProcCall|ProcerrRecovery|PulseDO|RaiseToUser|ReadAnyBin|ReadBlock|ReadCfgData|ReadErrData|ReadRawBytes|RemoveDir|RemoveFile|RenameFile|Reset|ResetPPMoved|ResetRetryCount|RestoPath|Rewind|RMQEmptyQueue|RMQFindSlot|RMQGetMessage|RMQGetMsgData|RMQGetMsgHeader|RMQReadWait|RMQSendMessage|RMQSendWait|Save|SCWrite|SearchC|SearchExtJ|SearchL|SenDevice|Set|SetAllDataVal|SetAO|SetDataSearch|SetDataVal|SetDO|SetGO|SetSysData|SingArea|SkipWarn|SocketAccept|SocketBind|SocketClose|SocketConnect|SocketCreate|SocketListen|SocketReceive|SocketSend|SoftAct|SoftDeact|SpeedRefresh|SpyStart|SpyStop|StartLoad|StartMove|StartMoveRetry|STCalib|STClose|StepBwdPath|STIndGun|STIndGunReset|SToolRotCalib|SToolTCPCalib|Stop|STOpen|StopMove|StopMoveReset|StorePath|STTune|STTuneReset|SyncMoveOff|SyncMoveOn|SyncMoveResume|SyncMoveSuspend|SyncMoveUndo|SystemStopAction|TestSignDefine|TestSignReset|TextTabInstall|TPErase|TPReadDnum|TPReadFK|TPReadNum|TPShow|TPWrite|TriggC|TriggCheckIO|TriggEquip|TriggInt|TriggIO|TriggJ|TriggL|TriggLIOs|TriggRampAO|TriggSpeed|TriggStopProc|TryInt|TuneReset|TuneServo|UIMsgBox|UIShow|UnLoad|UnpackRawBytes|VelSet|WaitAI|WaitAO|WaitDI|WaitDO|WaitGI|WaitGO|WaitLoad|WaitRob|WaitSyncTask|WaitTestAndSet|WaitTime|WaitUntil|WaitWObj|WarmStart|WorldAccLim|Write|WriteAnyBin|WriteBin|WriteBlock|WriteCfgData|WriteRawBytes|WriteStrBin|WriteVar|WZBoxDef|WZCylDef|WZDisable|WZDOSet|WZEnable|WZFree|WZHomeJointDef|WZLimJointDef|WZLimSup|WZSphDef|Abs|ACos|AOutput|ArgName|ASin|ATan|ATan2|BitAnd|BitCheck|BitLSh|BitNeg|BitOr|BitRSh|BitXOr|ByteToStr|CalcJointT|CalcRobT|CalcRotAxFrameZ|CalcRotAxisFrame|CDate|CJointT|ClkRead|CorrRead|Cos|CPos|CRobT|CSpeedOverride|CTime|CTool|CWObj|DecToHex|DefAccFrame|DefDFrame|DefFrame|Dim|Distance|DnumToNum|DotProd|DOutput|EulerZYX|EventType|ExecHandler|ExecLevel|Exp|FileSize|FileTime|FSSize|GetMecUnitName|GetNextMechUnit|GetNextSym|GetSysInfo|GetTaskName|GetTime|GInputDnum|GOutput|GOutputDnum|HexToDec|IndInpos|IndSpeed|IOUnitState|IsFile|IsMechUnitActive|IsPers|IsStopMoveAct|IsStopStateEvent|IsSyncMoveOn|IsSysId|IsVar|MaxRobSpeed|MirPos|ModExist|ModTime|MotionPlannerNo|NonMotionMode|NOrient|NumToDnum|NumToStr|Offs|OpMode|OrientZYX|ORobT|ParIdPosValid|ParIdRobValid|PathLevel|PathRecValidBwd|PathRecValidFwd|PFRestart|PoseInv|PoseMult|PoseVect|Pow|PPMovedInManMode|Present|ProgMemFree|RawBytesLen|ReadBin|ReadDir|ReadMotor|ReadNum|ReadStr|ReadStrBin|ReadVar|RelTool|RemainingRetries|RMQGetSlotName|RobName|RobOS|Round|RunMode|Sin|SocketGetStatus|Sqrt|STCalcForce|STCalcTorque|STIsCalib|STIsClosed|STIsIndGun|STIsOpen|StrDigCalc|StrDigCmp|StrFind|StrLen|StrMap|StrMatch|StrMemb|StrOrder|StrPart|StrToByte|StrToVal|Tan|TaskRunMec|TaskRunRob|TasksInSync|TestAndSet|TestDI|TestSignRead|TextGet|TextTabFreeToUse|TextTabGet|Trunc|Type|UIAlphaEntry|UIClientExist|UIDnumEntry|UIDnumTune|UIListView|UIMessageBox|UINumEntry|UINumTune|ValidIO|ValToStr|VectMagn)\\b"
         }
       ]
     },
