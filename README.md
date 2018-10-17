@@ -7,6 +7,10 @@ Language support for the ABB RAPID robot programming language.
 
 ## Changelog
 
-### 0.1
+### 0.1.1
+
+* Highlight default RAPID functions
+
+### 0.1.0
 
 * Initial release
